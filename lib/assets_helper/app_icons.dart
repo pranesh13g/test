@@ -3,4 +3,5 @@ class AppIcons {
 
   static const String logo = '$iconsRoute/logo.svg';
   static const String splashLogo = '$iconsRoute/splash.svg';
+  static const String splash = '$iconsRoute/ff.svg';
 }

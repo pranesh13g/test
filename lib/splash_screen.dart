@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_svg/flutter_svg.dart';
-import 'package:test/assets_helper/app_icons.dart';
+import 'package:flutter_screenutil/flutter_screenutil.dart';
+
+import 'package:test/assets_helper/app_images.dart';
 import 'package:test/common_widgets/company_text_widget.dart';
 
 class SplashScreen extends StatelessWidget {
@@ -14,10 +15,22 @@ class SplashScreen extends StatelessWidget {
           mainAxisAlignment: MainAxisAlignment.center,
           crossAxisAlignment: CrossAxisAlignment.center,
           children: [
-            SvgPicture.asset(AppIcons.splashLogo),
-            CompanyTextWidget(),
+            // SizedBox(
+            //   height: 150.h,
+            // ),
+            Center(
+              child: Image.asset(
+                AppImages.splashImg,
+                height: 214.h,
+                width: 214.w,
+              ),
+            ),
           ],
         ),
+      ),
+      bottomNavigationBar: Padding(
+        padding: EdgeInsets.only(bottom: 50.h),
+        child: CompanyTextWidget(),
       ),
     );
   }
