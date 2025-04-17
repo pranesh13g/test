@@ -1,7 +1,12 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_screenutil/flutter_screenutil.dart';
+import 'package:test/splash_screen.dart';
 
 void main() {
-  runApp(const MyApp());
+  runApp(ScreenUtilInit(
+    designSize: Size(360, 690),
+    builder: (context, child) => const MyApp(),
+  ));
 }
 
 class MyApp extends StatelessWidget {
@@ -15,7 +20,7 @@ class MyApp extends StatelessWidget {
       theme: ThemeData(
         useMaterial3: true,
       ),
-      home: Text("Hello"),
+      home: SplashScreen(),
     );
   }
 }
