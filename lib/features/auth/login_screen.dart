@@ -214,14 +214,17 @@ class LoginScreenState extends State<LoginScreen> {
                   )
                 ],
               ),
+              Padding(
+                  padding: EdgeInsets.symmetric(vertical: 30.h),
+                  child: CompanyTextWidget())
             ],
           ),
         ),
       ),
-      bottomNavigationBar: Padding(
-        padding: EdgeInsets.only(bottom: 30.h),
-        child: CompanyTextWidget(),
-      ),
+      // bottomNavigationBar: Padding(
+      //   padding: EdgeInsets.only(bottom: 30.h),
+      //   child: CompanyTextWidget(),
+      // ),
     );
   }
 }

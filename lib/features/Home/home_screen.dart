@@ -18,37 +18,39 @@ class HomeScreenState extends State<HomeScreen> {
   Widget build(BuildContext context) {
     return Scaffold(
       backgroundColor: AppColor.cFCFFFD,
-      body: Column(
-        crossAxisAlignment: CrossAxisAlignment.start,
-        children: [
-          Image.asset(
-            AppImages.homeCard,
-            height: 206.h,
-          ),
-          Padding(
-            padding: EdgeInsets.symmetric(horizontal: 26.w, vertical: 20.h),
-            child: Column(
-              crossAxisAlignment: CrossAxisAlignment.start,
-              children: [
-                Text(
-                  "My Places",
-                  style: GoogleFonts.poppins(
-                      fontSize: 16.sp,
-                      fontWeight: FontWeight.w300,
-                      color: AppColor.c1E1E1E),
-                ),
-                SizedBox(
-                  height: 15.h,
-                ),
-                HomeCard(),
-                SizedBox(
-                  height: 20.h,
-                ),
-                OfficeCard(),
-              ],
+      body: SingleChildScrollView(
+        child: Column(
+          crossAxisAlignment: CrossAxisAlignment.start,
+          children: [
+            Image.asset(
+              AppImages.homeCard,
+              height: 206.h,
             ),
-          )
-        ],
+            Padding(
+              padding: EdgeInsets.symmetric(horizontal: 26.w, vertical: 20.h),
+              child: Column(
+                crossAxisAlignment: CrossAxisAlignment.start,
+                children: [
+                  Text(
+                    "My Places",
+                    style: GoogleFonts.poppins(
+                        fontSize: 16.sp,
+                        fontWeight: FontWeight.w300,
+                        color: AppColor.c1E1E1E),
+                  ),
+                  SizedBox(
+                    height: 15.h,
+                  ),
+                  HomeCard(),
+                  SizedBox(
+                    height: 20.h,
+                  ),
+                  OfficeCard(),
+                ],
+              ),
+            )
+          ],
+        ),
       ),
       floatingActionButton: FloatingActionButton(
         onPressed: () {},

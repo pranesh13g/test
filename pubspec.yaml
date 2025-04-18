@@ -24,6 +24,7 @@ dependencies:
   flutter_screenutil: ^5.9.3
   intl_phone_number_input: ^0.7.4
   get: ^4.7.2
+  device_preview: ^1.2.0
 
 dev_dependencies:
   flutter_test:
