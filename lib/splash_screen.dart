@@ -29,7 +29,7 @@ class SplashScreen extends StatelessWidget {
         ),
       ),
       bottomNavigationBar: Padding(
-        padding: EdgeInsets.only(bottom: 50.h),
+        padding: EdgeInsets.only(bottom: 30.h),
         child: CompanyTextWidget(),
       ),
     );
