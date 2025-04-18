@@ -1,10 +1,13 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
+import 'package:get/get.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:intl_phone_number_input/intl_phone_number_input.dart';
 import 'package:test/assets_helper/app_colors.dart';
 import 'package:test/assets_helper/app_images.dart';
 import 'package:test/common_widgets/company_text_widget.dart';
+import 'package:test/features/Home/home_screen.dart';
+import 'package:test/features/auth/login_screen.dart';
 import 'package:test/features/auth/widgets/login_icon_widget.dart';
 
 class SignupScreen extends StatefulWidget {
@@ -233,18 +236,23 @@ class SignupScreenState extends State<SignupScreen> {
               SizedBox(
                 height: 50.h,
               ),
-              Container(
-                height: 42.h,
-                decoration: BoxDecoration(
-                    color: AppColor.c47BA80,
-                    borderRadius: BorderRadius.circular(20.r)),
-                child: Center(
-                  child: Text(
-                    "Sign Up",
-                    style: GoogleFonts.inter(
-                        fontWeight: FontWeight.w700,
-                        fontSize: 16.sp,
-                        color: AppColor.cFFFFFF),
+              GestureDetector(
+                onTap: () {
+                  Get.to(() => const HomeScreen());
+                },
+                child: Container(
+                  height: 42.h,
+                  decoration: BoxDecoration(
+                      color: AppColor.c47BA80,
+                      borderRadius: BorderRadius.circular(20.r)),
+                  child: Center(
+                    child: Text(
+                      "Sign Up",
+                      style: GoogleFonts.inter(
+                          fontWeight: FontWeight.w700,
+                          fontSize: 16.sp,
+                          color: AppColor.cFFFFFF),
+                    ),
                   ),
                 ),
               ),
@@ -278,12 +286,17 @@ class SignupScreenState extends State<SignupScreen> {
                   SizedBox(
                     width: 5.w,
                   ),
-                  Text(
-                    "Sign In",
-                    style: GoogleFonts.inter(
-                        fontWeight: FontWeight.w700,
-                        fontSize: 14.sp,
-                        color: AppColor.c47BA80),
+                  GestureDetector(
+                    onTap: () {
+                      Get.to(() => const LoginScreen());
+                    },
+                    child: Text(
+                      "Sign In",
+                      style: GoogleFonts.inter(
+                          fontWeight: FontWeight.w700,
+                          fontSize: 14.sp,
+                          color: AppColor.c47BA80),
+                    ),
                   ),
                 ],
               ),

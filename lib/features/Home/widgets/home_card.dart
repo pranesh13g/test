@@ -1,8 +1,10 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
+import 'package:get/get.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:test/assets_helper/app_colors.dart';
 import 'package:test/assets_helper/app_images.dart';
+import 'package:test/features/Home/details_screen.dart';
 
 class HomeCard extends StatelessWidget {
   const HomeCard({
@@ -137,24 +139,29 @@ class HomeCard extends StatelessWidget {
                 SizedBox(
                   height: 5.h,
                 ),
-                Row(
-                  children: [
-                    Text(
-                      "View Details",
-                      style: GoogleFonts.poppins(
-                          fontSize: 12.sp,
-                          fontWeight: FontWeight.w500,
-                          color: AppColor.c47BA80),
-                    ),
-                    SizedBox(
-                      width: 5.w,
-                    ),
-                    Image.asset(
-                      AppImages.greenPoly,
-                      height: 11.h,
-                      width: 10.w,
-                    )
-                  ],
+                GestureDetector(
+                  onTap: () {
+                    Get.to(() => const DetailsScreen());
+                  },
+                  child: Row(
+                    children: [
+                      Text(
+                        "View Details",
+                        style: GoogleFonts.poppins(
+                            fontSize: 12.sp,
+                            fontWeight: FontWeight.w500,
+                            color: AppColor.c47BA80),
+                      ),
+                      SizedBox(
+                        width: 5.w,
+                      ),
+                      Image.asset(
+                        AppImages.greenPoly,
+                        height: 11.h,
+                        width: 10.w,
+                      )
+                    ],
+                  ),
                 )
               ],
             )

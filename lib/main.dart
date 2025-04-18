@@ -1,10 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
-import 'package:test/features/Home/details_screen.dart';
-import 'package:test/features/Home/home_screen.dart';
-import 'package:test/features/auth/login_screen.dart';
-import 'package:test/features/auth/signup_screen.dart';
-import 'package:test/splash_screen.dart';
+import 'package:get/get_navigation/src/root/get_material_app.dart';
+import 'package:test/loading.dart';
 
 void main() {
   runApp(ScreenUtilInit(
@@ -16,15 +13,15 @@ void main() {
 class MyApp extends StatelessWidget {
   const MyApp({super.key});
 
-  // This widget is the root of your application.
   @override
   Widget build(BuildContext context) {
-    return MaterialApp(
+    return GetMaterialApp(
       title: 'Test app',
+      debugShowCheckedModeBanner: false,
       theme: ThemeData(
         useMaterial3: true,
       ),
-      home: DetailsScreen(),
+      home: Loading(),
     );
   }
 }

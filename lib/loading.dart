@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:test/features/auth/login_screen.dart';
+import 'package:test/splash_screen.dart';
 
 final class Loading extends StatefulWidget {
   const Loading({super.key});
@@ -30,7 +31,7 @@ class _LoadingState extends State<Loading> {
   @override
   Widget build(BuildContext context) {
     if (_isLoading) {
-      return const LoginScreen();
+      return const SplashScreen();
     } else {
       return LoginScreen();
     }

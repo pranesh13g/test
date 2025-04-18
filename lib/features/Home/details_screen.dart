@@ -1,8 +1,10 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
+import 'package:get/get.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:test/assets_helper/app_colors.dart';
 import 'package:test/assets_helper/app_images.dart';
+import 'package:test/features/Home/home_screen.dart';
 
 class DetailsScreen extends StatefulWidget {
   const DetailsScreen({super.key});
@@ -21,19 +23,29 @@ class DetailsScreenState extends State<DetailsScreen> {
           children: [
             Transform.translate(
               offset: Offset(0, 2),
-              child: Image.asset(
-                AppImages.arrowBack,
-                width: 18.w,
-                height: 15.h,
+              child: GestureDetector(
+                onTap: () {
+                  Get.to(() => const HomeScreen());
+                },
+                child: Image.asset(
+                  AppImages.arrowBack,
+                  width: 18.w,
+                  height: 15.h,
+                ),
               ),
             ),
             SizedBox(
               width: 10.w,
             ),
-            Image.asset(
-              AppImages.greenHome,
-              height: 28.w,
-              width: 28.w,
+            GestureDetector(
+              onTap: () {
+                Get.to(() => const HomeScreen());
+              },
+              child: Image.asset(
+                AppImages.greenHome,
+                height: 28.w,
+                width: 28.w,
+              ),
             ),
             SizedBox(
               width: 10.w,
