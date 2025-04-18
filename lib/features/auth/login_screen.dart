@@ -98,7 +98,7 @@ class LoginScreenState extends State<LoginScreen> {
                     GestureDetector(
                       onTap: () {
                         setState(() {
-                          value = !(value ?? false); // toggles true/false
+                          value = !(value ?? false);
                         });
                       },
                       child: Container(

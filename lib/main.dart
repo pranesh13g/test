@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
+import 'package:test/features/Home/home_screen.dart';
 import 'package:test/features/auth/login_screen.dart';
 import 'package:test/features/auth/signup_screen.dart';
 import 'package:test/splash_screen.dart';
@@ -22,7 +23,7 @@ class MyApp extends StatelessWidget {
       theme: ThemeData(
         useMaterial3: true,
       ),
-      home: SignupScreen(),
+      home: HomeScreen(),
     );
   }
 }
