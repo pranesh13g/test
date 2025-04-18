@@ -25,6 +25,7 @@ class AppImages {
   static const String greenHome = '$imageRoute/green_home.png';
   static const String leaf = '$imageRoute/leaf.png';
   static const String bar = '$imageRoute/bar.png';
+  static const String graypoly = '$imageRoute/graypoly.png';
 
   static const List<String> groupedImages = [one, two, three, four];
   static const List<String> groupedImages2 = [
